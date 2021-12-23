@@ -60,7 +60,7 @@ let card1 = 4;
 let card2 = 2;
 let card3 = 7;
 let card4 = 1;
-let card5 = 10;
+let card5 = 11;
 
 let result = card1 + card2 + card3 + card4 + card5;
 
@@ -86,12 +86,19 @@ dbwebb.assert("1.1", ANSWER, true);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+let status = "";
+if (result > 21) {
+    status = "busted";
+} else {
+    status = "safe";
+}
+
 
 
  
 
 
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = status;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("1.2", ANSWER, false);
@@ -111,13 +118,21 @@ dbwebb.assert("1.2", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+let threeCards = card1 + card2 + card3;
 
+if (threeCards == 21) {
+    status = "black jack";
+} else if (threeCards < 21) {
+    status = "safe";
+} else {
+    status = "busted";
+}
 
 
 
 
  
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = status;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("1.3", ANSWER, false);
@@ -144,13 +159,29 @@ dbwebb.assert("1.3", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+let dealer1 = 1;
+let dealer2 = 6;
+let dealer3 = 7;
+
+let dealerThreeCards = dealer1 + dealer2 + dealer3;
+let dealerStatus = "";
+
+if (dealerThreeCards < 17) {
+    dealerStatus = "pick";
+} else if (dealerThreeCards >= 17 && dealerThreeCards < 21) {
+    dealerStatus = "stop";
+} else if (dealerThreeCards == 21) {
+    dealerStatus = "black jack";
+} else {
+    dealerStatus = "busted";
+}
 
 
 
 
 
 
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = dealerStatus;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("1.4", ANSWER, false);
@@ -185,12 +216,32 @@ dbwebb.assert("1.4", ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+// let myFruit = "banana";
+// let myFruit = "apple";
+// let myFruit = "kiwi";
+let myFruit = "plum";
+let fruitColor = "";
+
+switch (myFruit) {
+    case "banana":
+        fruitColor = "The banana is yellow.";
+        break;
+    case "apple":
+        fruitColor = "The apple is green.";
+        break;
+    case "kiwi":
+        fruitColor = "The kiwi is green.";
+        break;
+    case "plum":
+        fruitColor = "The plum is purple.";
+        break;
+}
 
 
 
 
 
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = fruitColor;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("2.1", ANSWER, false);
@@ -208,13 +259,30 @@ dbwebb.assert("2.1", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+myFruit = "pear";
+
+switch (myFruit) {
+    case "banana":
+        fruitColor = "The banana is yellow.";
+        break;
+    case "apple":
+        fruitColor = "The apple is green.";
+        break;
+    case "kiwi":
+        fruitColor = "The kiwi is green.";
+        break;
+    case "plum":
+        fruitColor = "The plum is purple.";
+        break;
+    default :
+        fruitColor = "That is an unknown fruit.";
+}
 
 
 
 
 
-
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = fruitColor;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("2.2", ANSWER, false);
@@ -235,13 +303,12 @@ dbwebb.assert("2.2", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+let increment = 481;
+for (let i = 0; i < 10; i++) {
+    increment += 6;
+}
 
-
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = increment;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("3.1", ANSWER, false);
@@ -255,13 +322,16 @@ dbwebb.assert("3.1", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+let decrement = 551;
+for (let i = 0; i < 10; i++) {
+    decrement -= 8;
+}
 
 
 
 
 
-
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = decrement;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("3.2", ANSWER, false);
@@ -279,13 +349,16 @@ dbwebb.assert("3.2", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+let evenNumbers = "";
+for (let i = 22; i <= 45; i+=2) {
+    evenNumbers += i;
+    if (i >= 44) {
+        break;
+    }
+    evenNumbers += ",";
+}
 
-
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = evenNumbers;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("3.3", ANSWER, false);
@@ -308,12 +381,15 @@ dbwebb.assert("3.3", ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+let i = 10;
+let runs = 0;
+while (i <= 481) {
+    i += 6;
+    runs++;
+}
 
 
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = runs;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("4.1", ANSWER, false);
@@ -328,13 +404,14 @@ dbwebb.assert("4.1", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+i = 551;
+runs = 0;
+while (i >= 0) {
+    i -= 8;
+    runs++;
+}
 
-
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = runs;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("4.2", ANSWER, false);
@@ -343,19 +420,30 @@ dbwebb.assert("4.2", ANSWER, false);
  * Exercise 4.3 (3 points)
  *
  * Use a while-loop to add all the values, to a comma-separated string, in the
- * range `28` to `63`, where the value is divisable by 5 or 7.
+ * range `28` to `63`, where the value is dividable by 5 or 7.
  *
  * Answer with the resulting string.
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+i = 28;
+let awnser = "";
+while (i <= 63) {
+    if (i == 63) {
+        if (i % 5 == 0) {
+            awnser += i;
+        } else if (i % 7 == 0) {
+            awnser += i;
+        }
+    } else if (i % 5 == 0) {
+        awnser += i + ",";
+    } else if (i % 7 == 0) {
+        awnser += i + ",";
+    }
+    i++;
+}
 
-
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+ANSWER = awnser;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("4.3", ANSWER, false);
